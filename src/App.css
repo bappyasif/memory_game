@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.cardsContainer {
+  display: "flex";
+  flex-wrap: "wrap";
+  flex-direction: "row";
+  justify-content: "space-evenly";
+}
+
+.card {
+  width: "35%";
+  border: "dashed";
+  margin: "4px";
+  min-height: "110px";
+}
+
+.scorecard {
+  float: "right";
+  margin-right: "8.99vw";
+  border: "dashed";
+  text-align: "right";
+  width: "29vw";
+  padding-right: "4vw";
+}
+
+:local(.container){
+  color:  "maroon";
+  
+}
