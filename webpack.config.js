@@ -28,6 +28,29 @@ module.exports = {
         // use: {
         //   loader: ["style-loader", "css-loader"]
         // }
+      },
+      // {
+      //   test: /\.(png|jpg|gif|svg)$/i,
+      //   use: [
+      //     {
+      //       loader: "url-loader",
+      //       // loader: "url-loader?name=src/images[name].[ext]",
+      //       options: {
+      //         limit: false
+      //       }
+      //     }
+      //   ]
+      // }
+      {
+        test: /\.(svg|png|jpg|jpeg|gif)$/,
+        include: "./src/images/",
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[path][name].[ext]",
+            outputPath: "./dist/images/"
+          }
+        }
       }
     ],
   },

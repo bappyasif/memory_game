@@ -17,30 +17,43 @@
   color: #61dafb;
 }
 
+body {
+  background-color: silver;
+}
+
 .cardsContainer {
-  display: "flex";
-  flex-wrap: "wrap";
-  flex-direction: "row";
-  justify-content: "space-evenly";
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .card {
-  width: "35%";
-  border: "dashed";
-  margin: "4px";
-  min-height: "110px";
+  width: 35%;
+  border: dashed;
+  margin: 4px;
+  min-height: 110px;
 }
 
 .scorecard {
-  float: "right";
-  margin-right: "8.99vw";
-  border: "dashed";
-  text-align: "right";
-  width: "29vw";
-  padding-right: "4vw";
+  /* float: right; */
+  margin-right: 8.99vw;
+  border: dashed;
+  text-align: right;
+  width: 29vw;
+  padding-right: 4vw;
+  align-self: flex-end;
 }
 
-:local(.container){
-  color:  "maroon";
-  
+.container{
+  color:  green;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  margin: auto;
+}
+
+.card .svgs {
+  width: 65px;
+  height: 65px;
 }
