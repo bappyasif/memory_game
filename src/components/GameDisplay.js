@@ -12,13 +12,17 @@ export let GameDisplay = () => {
       onClick={cardsHandler}
       style={{
         backgroundImage: "url(" + item.svgUrl + ")",
-        backgroundPosition: "center",
-        backgroundSize: "contain",
-        backgroundRepeat: "no-repeat"
+        // backgroundPosition: "center",
+        backgroundPosition: "bottom",
+        // backgroundSize: "contain",
+        backgroundSize: `${item.id === 2 ? "contain" : ""}`,
+        backgroundRepeat: "no-repeat",
+        height: "65%",
+        // width: "20%"
       }}
     >
       {item.text}
-      {item.id}
+      {/* {item.id} */}
     </div>
   ));
 
@@ -33,6 +37,49 @@ export let GameDisplay = () => {
   // return <div style={cardsContainer}>{showCards}</div>;
 };
 
+/**
+ * 
+ * 
+   let showCards = cards.map((item) => (
+    // this works
+    <div className="card" id={item.id} key={item.id} onClick={cardsHandler}>
+      {item.text}
+      {item.id}
+      <div
+        style={{
+          backgroundImage: "url(" + item.svgUrl + ")",
+          backgroundPosition: "center",
+          // backgroundSize: "contain",
+          backgroundSize: `${item.id === 2 ? "contain" : ""}`,
+          backgroundRepeat: "no-repeat",
+          height: "65%"
+        }}
+        // onClick={cardsHandler}
+      />
+    </div>
+  ));
+ * 
+ * 
+ let showCards = cards.map((item) => (
+    // this works
+    <div
+      className="card"
+      id={item.id}
+      key={item.id}
+      onClick={cardsHandler}
+      style={{
+        backgroundImage: "url(" + item.svgUrl + ")",
+        backgroundPosition: "center",
+        // backgroundSize: "contain",
+        backgroundSize: `${item.id===2?"contain": ""}`,
+        backgroundRepeat: "no-repeat"
+      }}
+    >
+      {item.text}
+      {item.id}
+    </div>
+  ));
+ */
 
 // import { default as bird } from "../images/bird.svg";
 // import env from "../images/env.svg";

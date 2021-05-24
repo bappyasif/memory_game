@@ -43,12 +43,14 @@ module.exports = {
       // }
       {
         test: /\.(svg|png|jpg|jpeg|gif)$/,
-        include: "./src/images/",
+        // include: "./src/images/",
+        include: "/home/abappy/Documents/odin project/React Workouts/assignments/Memory_Game/src/images",
+        // include: "src/images/",
         use: {
           loader: "file-loader",
           options: {
             name: "[path][name].[ext]",
-            outputPath: "./dist/images/"
+            outputPath: "./images/"
           }
         }
       }

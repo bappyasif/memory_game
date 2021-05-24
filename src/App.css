@@ -26,34 +26,90 @@ body {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
+  color: darkcyan;
+  animation-name: containerMotions;
+  animation-duration: 2000ms;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes containerMotions {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 
 .card {
-  width: 35%;
-  border: dashed;
+  width: 29%;
+  border: dashed greenyellow;
   margin: 4px;
   min-height: 110px;
+  font-size: smaller;
+
+  /* color: whitesmoke */
+  animation-name: cardSway;
+  animation-duration: 920ms;
+  /* animation-direction: alternate-reverse; */
+  /* animation-timing-function: ease-in-out; */
+  animation-direction: alternate;
+}
+
+.card:hover {
+  /* flex-grow: 1.3; */
+  /* border-color: yellow; */
+  /* font-size: larger; */
+  /* box-shadow: coral 2px 4px; */
+  /* color: whitesmoke; */
+  animation-name: hoverMotion;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hoverMotion {
+  from {
+    box-shadow: coral 0.4px 1px;
+  }
+  to {
+    box-shadow: coral 1px 2px;
+    border-color: yellow;
+    color: whitesmoke;
+    font-size: larger;
+    flex-grow: 1.01;
+  }
+}
+
+@keyframes cardSway {
+  from {
+    margin-left: 4.4%;
+    opacity: 0%;
+  }
+  to {
+    margin-left: 0%;
+    opacity: 100%;
+  }
 }
 
 .scorecard {
   /* float: right; */
   margin-right: 8.99vw;
-  border: dashed;
+  border: dashed greenyellow;
   text-align: right;
   width: 29vw;
   padding-right: 4vw;
   align-self: flex-end;
 }
 
-.container{
-  color:  green;
+.container {
+  color: green;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
   margin: auto;
 }
 
-.card .svgs {
-  width: 65px;
+/* .card .svgs, svg {
+  width: 20px;
   height: 65px;
-}
+} */

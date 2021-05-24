@@ -13,11 +13,11 @@ export function GamePlay() {
     randomlyGenerated = randomCards();
     elId = evt.target.id;
 
-    console.log(gameData[elId].clicked);
+    // console.log(gameData[elId].clicked);
     if (!gameData[elId].clicked) {
       setScore((prevState) => prevState + 1);
       gameData[elId].clicked = !gameData[elId].clicked;
-      console.log("after", gameData[elId].clicked);
+      // console.log("after", gameData[elId].clicked);
     } else {
       gameData[elId].clicked = !gameData[elId].clicked;
       setScore(0);
@@ -41,8 +41,8 @@ let randomlyOrdered = () => {
   let temp = [];
   gameData.forEach((item) => {
     let rnd = Math.floor(Math.random() * gameData.length);
-    // console.log("rnd", rnd);
-    if (temp.indexOf(rnd) === -1 && rnd) temp.push(rnd);
+    // console.log("rnd", rnd, item.id);
+    if (temp.indexOf(rnd) === -1 && rnd && rnd !== item.id) temp.push(rnd);
   });
   let randomized = [];
   let test = gameData.map((item) =>

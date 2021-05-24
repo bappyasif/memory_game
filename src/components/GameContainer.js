@@ -5,7 +5,7 @@ export function GameContainer() {
   let [showCards, scorecard] = GameDisplay();
   return (
     <div className="container">
-      <p>randomly displaying memory cards</p>
+      <p>randomly displaying memory cards, topic here <b>Green Energy</b></p>
       <div className="scorecard">{scorecard}</div>
       <div
         // className="container"
